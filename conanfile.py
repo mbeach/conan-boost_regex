@@ -7,7 +7,7 @@ from conans import ConanFile, tools
 class BoostRegexConan(ConanFile):
     name = "boost_regex"
     version = "1.66.0"
-    url = "https://github.com/bincrafters/conan-boost-regex"
+    url = "https://github.com/bincrafters/conan-boost_regex"
 
     lib_short_names = ["regex"]
     is_header_only = False
