@@ -37,6 +37,12 @@ class BoostRegexConan(ConanFile):
         if self.options.use_icu:
             self.requires("icu/59.1@bincrafters/testing")
 
+    def package_id_additional(self):
+        boost_deps_only = [dep_name for dep_name in self.info.requires.pkg_names if dep_name.startswith("boost_")]
+
+        for dep_name in boost_deps_only:
+            self.info.requires[dep_name].full_version_mode()
+
     # BEGIN
 
     description = "Please visit http://www.boost.org/doc/libs/1_66_0"
