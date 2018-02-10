@@ -35,7 +35,7 @@ class BoostRegexConan(ConanFile):
 
     def requirements(self):
         if self.options.use_icu:
-            self.requires("icu/59.1@bincrafters/testing")
+            self.requires("icu/59.1@bincrafters/stable")
 
     def package_id_additional(self):
         boost_deps_only = [dep_name for dep_name in self.info.requires.pkg_names if dep_name.startswith("boost_")]
