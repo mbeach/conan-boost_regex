@@ -15,7 +15,6 @@ class BoostRegexConan(ConanFile):
     options = {"shared": [True, False], "use_icu": [True, False]}
     default_options = "shared=False", "use_icu=False"
 
-    # TODO: functional
     requires = (
         "boost_assert/1.67.0@bincrafters/testing",
         "boost_concept_check/1.67.0@bincrafters/testing",
