@@ -50,7 +50,7 @@ class BoostRegexConan(ConanFile):
     short_paths = True
     generators = "boost"
     settings = "os", "arch", "compiler", "build_type"
-    build_requires = "boost_generator/1.66.0@mbeach/stable"
+    build_requires = "boost_generator/1.66.0@bincrafters/stable"
 
     def package_id(self):
         getattr(self, "package_id_additional", lambda:None)()
